@@ -1,0 +1,2 @@
+-- Add signal_strength column to balances table for admin control
+ALTER TABLE public.balances ADD COLUMN IF NOT EXISTS signal_strength INTEGER DEFAULT 3 CHECK (signal_strength >= 1 AND signal_strength <= 5);
